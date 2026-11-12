@@ -27,10 +27,10 @@ jobs:
           node-version: 20
 
       - name: Install Dependencies
-        run: npm install
+        run: npm --prefix frontend install
 
       - name: Build Frontend (Static Mode)
-        run: npm run build -- --base=/siews-frontend/
+        run: npm --prefix frontend run build -- --base=/siews-frontend/
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
@@ -38,7 +38,7 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './dist'
+          path: './frontend/dist'
 
       - name: Deploy to GitHub Pages
         id: deployment
