@@ -66,7 +66,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onEnterPortal }) => {
       icon: Sparkles,
       items: [
         { label: 'Dual Causal Taxonomy: real-time extraction against HFACS (human factors) and Boeing/FAA MEDA maintenance errors', detail: 'Automated taxonomy tagging for causal inference' },
-        { label: 'Safety Officer Review Queue: causal inferences with confidence < 0.80 route into human-in-the-loop review', detail: 'Human adjudication gate for AI-assisted tags' },
+        { label: 'Safety Officer Review Queue: causal inferences with confidence under 0.80 route into human-in-the-loop review', detail: 'Human adjudication gate for AI-assisted tags' },
         { label: 'Spatio-Temporal Clustering: Haversine density windowing pinpoints geographic hotspots and runway precursor chains', detail: 'Geographic and temporal pattern detection' },
         { label: 'SPC Control Charts (μ ± 3σ): automated Nelson rule violation alerts detecting systemic drift before occurrence spikes', detail: 'Statistical process control for fleet-wide monitoring' },
       ],
@@ -200,7 +200,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onEnterPortal }) => {
                     <Sparkles className="w-3 h-3 align-middle" /> Live
                   </button>
                   <button className="bg-white hover:bg-slate-100 text-slate-600 text-xs font-semibold px-3 py-1.5 rounded-lg border border-slate-300/20 transition">
-                    <Pause className="w-3 h-3 align-middle" /> Pause
+                    <span>Pause</span>
                   </button>
                 </div>
               </div>
@@ -286,7 +286,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onEnterPortal }) => {
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
-                  <span><strong>Safety Officer Review Queue:</strong> Causal inferences with confidence < 0.80 route into a human-in-the-loop review queue for expert adjudication.</span>
+                  <span><strong>Safety Officer Review Queue:</strong> Causal inferences with confidence under 0.80 route into a human-in-the-loop review queue for expert adjudication.</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
